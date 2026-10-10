@@ -374,7 +374,7 @@
     var f = (C.imageFocus || {})[name]; if (!f) return '';
     return 'object-position:' + f.x + '% ' + f.y + '%;transform-origin:' + f.x + '% ' + f.y + '%;transform:scale(' + (f.zoom || 1) + ')';
   }
-  function imgUrl(name) { var v = (C.imageVersions || {})[name]; return v ? '../media/' + name + '?v=' + v : '../images/' + name; }
+  function imgUrl(name) { var v = (C.imageVersions || {})[name]; return v ? '/media/' + name + '?v=' + v : '/images/' + name; }
   function photoCard(name, label, hint, extra, ratio, shape) {
     return '<div class="photo"><div class="photo__img" data-preview="' + esc(name) + '"><img src="' + esc(imgUrl(name)) + '" alt="" style="' + focusStyle(name) + '" onerror="this.remove()"><span>Pa foto ende</span></div>' +
       '<div class="photo__body"><b>' + esc(label) + '</b><small>' + esc(name) + (hint ? ' · ' + esc(hint) : '') + '</small>' + (extra || '') +
@@ -500,7 +500,7 @@
     $('#app').hidden = true; $('#login').hidden = false; $('#loginPw').focus();
   }
   function startApp() {
-    return fetch('../data/content.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (c) {
+    return fetch('/data/content.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (c) {
       C = c; C.text = C.text || {}; C.ui = C.ui || { en: {}, sq: {} }; C.schedule = C.schedule || {}; C.services = C.services || [];
       $('#login').hidden = true; $('#app').hidden = false;
       render(); markClean();

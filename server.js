@@ -182,8 +182,7 @@ async function api(req, res, url) {
 
 function serveStatic(req, res, url) {
   let rel = decodeURIComponent(url.pathname);
-  if (rel === '/admin') { res.writeHead(301, { Location: '/admin/' }); return res.end(); }
-  if (rel.endsWith('/')) rel += 'index.html';
+  if (rel === '/admin' || rel.endsWith('/')) rel = rel.replace(/\/?$/, '/index.html');
   const parts = rel.split('/').filter(Boolean);
 
   if (parts.some(p => p.startsWith('.'))) return send(res, 404, 'Not found');

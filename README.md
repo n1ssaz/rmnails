@@ -22,12 +22,17 @@ Copy `.env.example` to `.env` and fill in what you need. Every value is optional
 
 `.env` is in `.gitignore`: never commit it.
 
+## Structure
+- `public/`: the website and the admin panel (HTML, CSS, JS, photos). On Vercel these are served directly by the CDN.
+- `server.js`, `storage.js`: the server for `/api/*` (admin), `/data/content.json` (content) and `/media/*` (photos uploaded in the admin).
+- `data/content.json`: starting content, copied into the database on first start.
+
 ## Storage
-- **Without `DATABASE_URL`**: content in `data/content.json`, password hash and backups in `private/`, photos in `images/`.
+- **Without `DATABASE_URL`**: content in `data/content.json`, password hash and backups in `private/`, photos in `public/images/`.
 - **With `DATABASE_URL`**: everything the admin changes (content, password hash, last 30 backups, uploaded photos) is stored in PostgreSQL.
   The tables `rm_settings`, `rm_content_backups` and `rm_images` are created automatically on first start,
   and the current `data/content.json` is copied into the database once.
-  Photos not uploaded through the admin are still served from `images/`.
+  Photos not uploaded through the admin are served from `public/images/`.
 
 ## Admin password
 If `ADMIN_PASSWORD` is not set, a password is generated on first start and written to `private/ADMIN-PASSWORD.txt`.
