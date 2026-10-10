@@ -1,0 +1,15 @@
+{
+  "name": "rm-nails-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RM Nails Suite website with admin panel",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pg": "^8.23.1"
+  }
+}

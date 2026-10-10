@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RM Admin</title>
+  <link rel="icon" type="image/png" href="../images/favicon-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<main class="login" id="login" hidden>
+  <form class="login__card" id="loginForm">
+    <span class="logo">RM</span>
+    <h1>Admin panel</h1>
+    <p class="muted">RM Nails Suite</p>
+    <label class="field"><span>Fjalëkalimi</span><input type="password" id="loginPw" autocomplete="current-password" required></label>
+    <button class="btn btn--solid" type="submit">Hyr</button>
+    <p class="error" id="loginErr" role="alert"></p>
+  </form>
+</main>
+
+<div class="app" id="app" hidden>
+  <aside class="side">
+    <div class="side__brand"><span class="logo logo--sm">RM</span><span>Admin</span></div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="calendar" class="on">Kalendari</button>
+      <button data-tab="services">Shërbimet &amp; çmimet</button>
+      <button data-tab="texts">Tekstet</button>
+      <button data-tab="contact">Kontakti</button>
+      <button data-tab="reviews">Review-t</button>
+      <button data-tab="work">Punimet</button>
+      <button data-tab="photos">Fotot</button>
+      <button data-tab="security">Siguria</button>
+    </nav>
+    <a class="side__link" href="../" target="_blank" rel="noopener">Shiko faqen ↗</a>
+  </aside>
+
+  <div class="main">
+    <header class="bar">
+      <h2 id="tabTitle">Kalendari</h2>
+      <div class="bar__right">
+        <span class="status" id="status">Të gjitha ndryshimet janë ruajtur</span>
+        <button class="btn btn--solid" id="saveBtn" disabled>Ruaj ndryshimet</button>
+      </div>
+    </header>
+
+    <section class="panel on" data-panel="calendar">
+      <div class="grid2">
+        <div class="card">
+          <h3>Orari i javës</h3>
+          <p class="muted">Oraret e punës për çdo ditë. Klientet shohin vetëm orët brenda këtij orari.</p>
+          <table class="week" id="weekTable"></table>
+          <div class="row3">
+            <label class="field"><span>Kohëzgjatja e një orari</span>
+              <select id="slotMinutes"><option value="15">15 min</option><option value="20">20 min</option><option value="30">30 min</option><option value="45">45 min</option><option value="60">60 min</option></select></label>
+            <label class="field"><span>Rezervimi i fundit para mbylljes</span>
+              <select id="lastSlot"><option value="0">Deri në mbyllje</option><option value="30">30 min para</option><option value="60">1 orë para</option><option value="90">1.5 orë para</option><option value="120">2 orë para</option></select></label>
+            <label class="field"><span>Ditë të hapura për rezervim</span><input type="number" id="daysAhead" min="1" max="60"></label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cal__head">
+            <button class="icon-btn" id="calPrev" aria-label="Muaji i kaluar">←</button>
+            <h3 id="calTitle"></h3>
+            <button class="icon-btn" id="calNext" aria-label="Muaji tjetër">→</button>
+          </div>
+          <div class="cal" id="cal"></div>
+          <p class="legend"><i class="lg lg--closed"></i> Mbyllur <i class="lg lg--blocked"></i> Ka orë të zëna <i class="lg lg--today"></i> Sot</p>
+          <div class="day" id="dayPanel"><p class="muted">Kliko një ditë për ta mbyllur ose për të bllokuar orë të zëna.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-panel="services">
+      <p class="muted intro">Këto shfaqen te lista e çmimeve dhe te rezervimi. Çmimet janë në Lek.</p>
+      <div id="svcList" class="stack"></div>
+      <button class="btn btn--line" id="svcAdd">+ Shto shërbim</button>
+    </section>
+
+    <section class="panel" data-panel="texts">
+      <div class="texts__top">
+        <input type="search" id="textSearch" placeholder="Kërko tekst…" aria-label="Kërko tekst">
+        <p class="muted">Çdo tekst ka versionin anglisht dhe shqip. <code>&lt;em&gt;…&lt;/em&gt;</code> = shkronja të pjerrëta (ngjyrë mocha).</p>
+      </div>
+      <div id="textGroups"></div>
+    </section>
+
+    <section class="panel" data-panel="contact">
+      <div class="card">
+        <h3>Kontakti &amp; vendndodhja</h3>
+        <div class="form2" id="contactForm"></div>
+      </div>
+    </section>
+
+    <section class="panel" data-panel="reviews">
+      <p class="muted intro">Vendos vetëm komente reale nga klientet, me lejen e tyre. Komentet e shënuara si <b>shembull</b> shfaqen vetëm kur e hap faqen te kompjuteri yt, jo në faqen e publikuar.</p>
+      <div id="revList" class="stack"></div>
+      <button class="btn btn--line" id="revAdd">+ Shto review</button>
+    </section>
+
+    <section class="panel" data-panel="work">
+      <p class="muted intro">6 fotot e seksionit “The Work”, nga e majta në të djathtë, me tekstin e vogël në cep.</p>
+      <div id="workList" class="work-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="photos">
+      <p class="muted intro">Kliko “Ndrysho foton” për ta zëvendësuar. Fotot zvogëlohen dhe optimizohen automatikisht.</p>
+      <div id="photoList" class="photo-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="security">
+      <div class="card narrow">
+        <h3>Ndrysho fjalëkalimin</h3>
+        <form id="pwForm" class="stack-sm">
+          <label class="field"><span>Fjalëkalimi aktual</span><input type="password" id="pwCur" autocomplete="current-password" required></label>
+          <label class="field"><span>Fjalëkalimi i ri (min. 8 karaktere)</span><input type="password" id="pwNew" autocomplete="new-password" minlength="8" required></label>
+          <button class="btn btn--solid" type="submit">Ndrysho</button>
+        </form>
+      </div>
+      <div class="card narrow">
+        <h3>Dil</h3>
+        <button class="btn btn--line" id="logoutBtn">Dil nga admin panel</button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<dialog class="focus" id="focusDlg" aria-labelledby="focusTitle">
+  <h3 id="focusTitle">Rregullo pozicionin</h3>
+  <p class="muted">Tërhiq foton me maus ose përdor rrëshqitësit. Korniza tregon si do të duket në faqe.</p>
+  <div class="focus__frame" id="focusFrame"><img id="focusImg" alt="" draggable="false"></div>
+  <div class="focus__ctrls">
+    <label class="field"><span>Majtas ↔ Djathtas <b id="focusXv"></b></span><input type="range" id="focusX" min="0" max="100" step="0.5"></label>
+    <label class="field"><span>Lart ↕ Poshtë <b id="focusYv"></b></span><input type="range" id="focusY" min="0" max="100" step="0.5"></label>
+    <label class="field"><span>Zmadhimi <b id="focusZv"></b></span><input type="range" id="focusZ" min="1" max="2.5" step="0.01"></label>
+  </div>
+  <div class="focus__btns">
+    <button type="button" class="btn btn--line btn--small" id="focusReset">Rikthe në qendër</button>
+    <span></span>
+    <button type="button" class="btn btn--line" id="focusCancel">Anulo</button>
+    <button type="button" class="btn btn--solid" id="focusSave">Ruaj pozicionin</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="filePick" accept="image/jpeg,image/png,image/webp" hidden>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RM Nails Suite</title>
+  <meta name="description" content="RM Nails Suite — Russian manicure & pedicure studio in Tirana. Gel manicure and pedicure, booked in minutes on WhatsApp.">
+  <meta name="theme-color" content="#F4EEE6">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&family=Roboto+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=55">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <a href="#top" class="brand" aria-label="RM Nails Suite — home">
+    <span class="brand__rm">RM</span>
+    <span class="brand__word">Nails Suite</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#work" data-i18n="nav.work">Work</a>
+    <a href="#studio" data-i18n="nav.studio">Studio</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="header__right">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="false">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="sq" aria-pressed="true">SQ</button>
+    </div>
+    <a href="#book" class="btn btn--pill" data-i18n="cta.bookAppt">Book appointment</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__nav" aria-label="Mobile">
+    <a href="#about"><i>01</i><span data-i18n="nav.about">About</span></a>
+    <a href="#services"><i>02</i><span data-i18n="nav.services">Services</span></a>
+    <a href="#work"><i>03</i><span data-i18n="nav.work">Work</span></a>
+    <a href="#studio"><i>04</i><span data-i18n="nav.studio">Studio</span></a>
+    <a href="#contact"><i>05</i><span data-i18n="nav.contact">Contact</span></a>
+  </nav>
+  <div class="menu__foot">
+    <a href="#book" class="btn btn--solid" data-i18n="cta.bookAppt">Book appointment</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="false">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="sq" aria-pressed="true">SQ</button>
+    </div>
+    <p class="micro" data-bind="menu-line">Kompleksi IBN · Tiranë · 09:00–20:00</p>
+  </div>
+</div>
+
+<main>
+
+<section class="hero">
+  <svg class="orbits" viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="398"/><circle cx="400" cy="400" r="300"/><circle cx="560" cy="400" r="230"/></svg>
+  <div class="hero__text">
+    <p class="eyebrow load-in"><span class="tag" data-i18n="hero.tag">Russian Manicure &amp; Pedicure</span><span class="micro">Tiranë — AL</span></p>
+    <h1 class="hero__title" data-i18n="hero.title"><span class="ln"><span>Precision,</span></span><span class="ln"><em>softly</em></span><span class="ln ln--push"><span>done.</span></span></h1>
+    <div class="hero__foot load-in">
+      <p class="hero__lede" data-i18n="hero.lede">A calm nail suite in Tirana for clean Russian manicures, gel and pedicures — shaped around your hands and finished with obsessive care.</p>
+    </div>
+  </div>
+  <div class="hero__media" data-parallax="0.08">
+    <figure class="ph arch hero__img" data-img="hero.jpg" data-label="Hero · nail close-up" data-alt="Cuticle oil dropped from a pipette onto hands with dark green gel nails"></figure>
+    <p class="hero__caption micro"><span class="hours-dot"></span><span data-bind="hours">09:00 — 20:00</span> <span data-i18n="hero.daily">· by appointment</span></p>
+  </div>
+  <a href="#statement" class="scroll-cue micro" aria-label="Scroll"><span data-i18n="hero.scroll">Scroll</span><i></i></a>
+</section>
+
+<div class="sheet">
+
+<section class="statement" id="statement">
+  <p class="label reveal"><span>01</span> — <span data-i18n="st.label">Philosophy</span></p>
+  <h2 class="statement__title reveal" data-i18n="st.title">Details matter. <em>So do your hands.</em></h2>
+  <div class="statement__cols">
+    <p class="reveal" data-i18n="st.p1">The Russian technique is slow on purpose: careful cuticle work, a clean line along the nail fold and colour laid close to the skin — so the finish looks tidy on day one and graceful weeks later.</p>
+    <p class="reveal" data-i18n="st.p2">Every appointment is one person, one chair and full attention. Shape, length and shade are chosen with you, never for you.</p>
+  </div>
+  <ul class="pillars reveal" aria-label="What we care about">
+    <li data-i18n="st.k1">Craft</li><li data-i18n="st.k2">Precision</li><li data-i18n="st.k3">Personal</li><li data-i18n="st.k4">Self-care</li>
+  </ul>
+</section>
+
+<section class="about" id="about">
+  <div class="about__media">
+    <figure class="ph arch about__main reveal" data-img="artist.jpg" data-label="The artist · portrait" data-alt="The nail artist at her station in RM Nails Suite" data-parallax="0.05"></figure>
+    <figure class="ph about__detail reveal" data-img="artist-detail.jpg" data-label="Detail · at work" data-alt="Hands with a soft pink French manicure"></figure>
+    <span class="about__script" aria-hidden="true">RM</span>
+  </div>
+  <div class="about__text">
+    <p class="label reveal"><span>02</span> — <span data-i18n="ab.label">The artist</span></p>
+    <h2 class="h-display reveal" data-i18n="ab.title">The hands <em>behind</em> the suite.</h2>
+    <a class="about__handle reveal" data-href="artist-ig" data-bind="artist-ig" href="https://www.instagram.com/_rmaxhari_/" target="_blank" rel="noopener">@_rmaxhari_</a>
+    <p class="reveal" data-i18n="ab.p1">RM Nails Suite is a personal studio — the work, the space and the pace all come from one artist’s idea of what a nail appointment should feel like: unhurried, precise and quietly beautiful.</p>
+    <p class="about__bio reveal" data-i18n="ab.bio">Life isn’t perfect, <em>but my nails are.</em></p>
+    <blockquote class="about__quote reveal" data-i18n="ab.quote">“Beauty at your fingertips.”</blockquote>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services__head">
+    <p class="label reveal"><span>03</span> — <span data-i18n="sv.label">The menu</span></p>
+    <h2 class="mega reveal" data-i18n="sv.title">Services</h2>
+  </div>
+  <div class="svc-ed">
+    <svg class="svc-ed__rings" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="260" cy="560" r="560"/><circle cx="1500" cy="330" r="470"/><circle cx="700" cy="1120" r="430"/></svg>
+
+    <p class="svc-ed__statement reveal" data-i18n="sv.stmt">Whether you’re <i class="bar" style="--w:2.6em"></i> looking for a clean minimalist look or long-lasting <i class="bar" style="--w:7.2em"></i> gel polish, every treatment at RM Nails Suite leaves your hands and feet perfectly cared for — a reflection of effortless elegance <i class="bar" style="--w:.9em"></i></p>
+
+    <div class="svc-ed__left">
+      <div class="svc-ed__aside reveal">
+        <h3 data-i18n="sv.premT">Premium products</h3>
+        <p data-i18n="sv.premP">Our specialists use only premium products and follow strict hygiene standards to ensure safety and relaxation</p>
+      </div>
+      <figure class="ph svc-ed__small reveal" data-img="service-pedicure.jpg" data-label="Service · pedicure"></figure>
+      <p class="svc-ed__cap reveal" data-i18n="sv.cap">At RM Nails Suite, every visit is more than a service — it’s a gentle ritual of renewal, created to reveal your natural elegance and restore your sense of calm</p>
+      <button class="book-this" data-service="pedi"><span data-i18n="sv.bookPedi">Book a pedicure</span> <svg class="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    </div>
+
+    <div class="svc-ed__right">
+      <h3 class="svc-ed__h reveal" data-i18n="sv.h">Manicure &amp; pedicure in Tirana</h3>
+      <div class="svc-ed__copy reveal">
+        <p data-i18n="sv.p1">At RM Nails Suite, we believe that hand and foot care is more than a routine <u>— it’s a calming ritual of beauty and self-care</u>. Our <mark>professional manicure</mark> and pedicure services in Tirana are designed to bring comfort, precision, and elegance to every detail.</p>
+        <p data-i18n="sv.p2">We offer classic, combined, and gel manicures, as well as pedicure and foot spa treatments for smooth, healthy skin. Each session includes careful nail shaping, cuticle care, gentle exfoliation, and nourishing massage to restore softness and glow.</p>
+      </div>
+      <figure class="ph svc-ed__big reveal" data-img="service-manicure.jpg" data-label="Service · manicure"></figure>
+      <button class="book-this" data-service="gel-mani"><span data-i18n="sv.bookMani">Book a manicure</span> <svg class="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+
+  <div class="price">
+    <div class="price__head">
+      <p class="label reveal"><span>03</span> — <span data-i18n="sv.priceLabel">Price list</span></p>
+      <h3 class="h-display reveal" data-i18n="sv.priceTag">Manicure &amp; pedicure <em>prices.</em></h3>
+    </div>
+    <p class="price__swipe" data-i18n="sv.swipe">Swipe for the photo →</p>
+    <div class="price__body">
+      <ol class="price__list" id="priceList"></ol>
+      <figure class="ph price__img reveal" data-img="pricelist-2.jpg" data-label="Price list · portrait" data-alt="Hands with muted sage, taupe and olive gel nails covering the eyes"><div class="price__blinds" id="priceBlinds" aria-hidden="true"></div></figure>
+    </div>
+    <p class="price__note" data-i18n="sv.priceNote">All prices in Albanian Lek (L)</p>
+  </div>
+</section>
+
+<section class="studio" id="studio">
+  <svg class="wave wave--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V40C160 0 280 0 400 30s240 50 380 20S1060-10 1200 20s200 40 240 30v30Z"/></svg>
+  <div class="studio__head">
+    <p class="label reveal"><span>04</span> — <span data-i18n="sd.label">The suite</span></p>
+    <h2 class="h-display reveal" data-i18n="sd.title">Come in, <em>sit softly.</em></h2>
+    <p class="reveal" data-i18n="sd.p">Arched cream walls, warm wood, a colour bar lit like a gallery and fresh flowers on the desk. This is where your appointment happens.</p>
+  </div>
+  <div class="collage">
+    <figure class="studio-shot s1 reveal">
+      <div class="ph" data-img="studio-2.jpg" data-label="Studio · colour bar"></div>
+      <figcaption><span>01</span> <span data-i18n="sd.c1">The colour bar</span></figcaption>
+    </figure>
+    <figure class="studio-shot s2 reveal" data-parallax="0.04">
+      <div class="ph" data-img="studio-1.jpg" data-label="Studio · interior"></div>
+      <figcaption><span>02</span> <span data-i18n="sd.c2">The suite</span></figcaption>
+    </figure>
+    <figure class="studio-shot s3 reveal">
+      <div class="ph" data-img="studio-3.jpg" data-label="Studio · station"></div>
+      <figcaption><span>03</span> <span data-i18n="sd.c3">Your chair</span></figcaption>
+    </figure>
+    <p class="collage__cap micro reveal" data-bind="addr-line">Ish Fusha Aviacionit · Kompleksi IBN · Tiranë</p>
+  </div>
+</section>
+
+<section class="experience">
+  <p class="label reveal"><span>05</span> — <span data-i18n="ex.label">The experience</span></p>
+  <ol class="steps">
+    <li class="reveal"><span class="steps__n">01</span><h3 data-i18n="ex.s1">Arrive</h3><p data-i18n="ex.s1d">A quiet chair, a warm welcome, no rush.</p></li>
+    <li class="reveal"><span class="steps__n">02</span><h3 data-i18n="ex.s2">Choose</h3><p data-i18n="ex.s2d">Shape, length and shade — decided together.</p></li>
+    <li class="reveal"><span class="steps__n">03</span><h3 data-i18n="ex.s3">Create</h3><p data-i18n="ex.s3d">Careful prep, clean cuticles, colour close to the skin.</p></li>
+    <li class="reveal"><span class="steps__n">04</span><h3 data-i18n="ex.s4">Leave polished</h3><p data-i18n="ex.s4d">Hands you’ll keep looking at on the way home.</p></li>
+  </ol>
+</section>
+
+<section class="love" aria-labelledby="loveTitle">
+  <figure class="ph love__bg" data-img="love.jpg" data-label="Client love · hands" data-parallax="0.06"></figure>
+  <h2 class="love__title" id="loveTitle" data-i18n="lv.title"><span>Client</span><span>Love</span></h2>
+  <div class="love__quote" id="loveQuote" aria-live="polite">
+
+  </div>
+  <span class="love__mark" aria-hidden="true">RM</span>
+</section>
+
+<section class="work" id="work">
+  <div class="work__head">
+    <p class="label reveal"><span>06</span> — <span data-i18n="wk.label">Portfolio</span></p>
+    <h2 class="mega mega--work reveal" data-i18n="wk.title">The <em>Work</em></h2>
+    <p class="reveal" data-i18n="wk.p">A few recent sets from the suite.</p>
+  </div>
+  <div class="work__row" id="workGrid"></div>
+</section>
+
+<section class="book" id="book">
+  <svg class="wave wave--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V50C200 10 360 0 520 30s300 40 460 10S1260 0 1440 40v40Z"/></svg>
+  <svg class="orbits orbits--book" viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="398"/><circle cx="400" cy="400" r="280"/></svg>
+  <div class="book__intro">
+    <p class="label reveal"><span>07</span> — <span data-i18n="bk.label">Appointments</span></p>
+    <h2 class="book__title reveal" data-i18n="bk.title">Your next set <em>starts here.</em></h2>
+    <p class="reveal" data-i18n="bk.p">Pick a service, a day and a preferred time. We’ll open WhatsApp with your request written for you — the studio confirms your exact slot.</p>
+    <ol class="progress reveal" aria-label="Booking progress">
+      <li data-step="1"><i>01</i><span data-i18n="bk.s1">Service</span></li>
+      <li data-step="2"><i>02</i><span data-i18n="bk.s2">Date</span></li>
+      <li data-step="3"><i>03</i><span data-i18n="bk.s3">Time</span></li>
+      <li data-step="4"><i>04</i><span data-i18n="bk.s4">Confirm</span></li>
+    </ol>
+  </div>
+
+  <form class="booker" id="booker" novalidate>
+    <fieldset class="bstep" data-step="1">
+      <legend><i>01</i><span data-i18n="bk.q1">Choose your service</span></legend>
+      <div class="chips" id="svcChips" role="radiogroup"></div>
+      <label class="addon" id="addonWrap" hidden><input type="checkbox" id="addon"><span class="addon__box" aria-hidden="true"></span><span id="addonLabel"></span></label>
+    </fieldset>
+
+    <fieldset class="bstep" data-step="2">
+      <legend><i>02</i><span data-i18n="bk.q2">Choose your date</span></legend>
+      <div class="dates" id="dateStrip" role="radiogroup"></div>
+    </fieldset>
+
+    <fieldset class="bstep" data-step="3">
+      <legend><i>03</i><span data-i18n="bk.q3">Choose a preferred time</span></legend>
+      <div class="times" id="timeGrid" role="radiogroup"></div>
+    </fieldset>
+
+    <fieldset class="bstep bstep--confirm" data-step="4">
+      <legend><i>04</i><span data-i18n="bk.q4">Confirm</span></legend>
+      <div class="ticket">
+        <dl class="ticket__rows">
+          <div><dt data-i18n="bk.s1">Service</dt><dd id="sumService">—</dd></div>
+          <div><dt data-i18n="bk.s2">Date</dt><dd id="sumDate">—</dd></div>
+          <div><dt data-i18n="bk.s3">Time</dt><dd id="sumTime">—</dd></div>
+          <div class="ticket__total"><dt data-i18n="bk.est">Estimate</dt><dd id="sumPrice">—</dd></div>
+        </dl>
+        <label class="field"><span data-i18n="bk.name">Your name (optional)</span><input type="text" id="clientName" autocomplete="given-name" maxlength="40"></label>
+        <button type="submit" class="btn btn--solid btn--wa" id="sendWa" disabled>
+          <svg class="ico" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.3-1.8-.9-.8.8a4 4 0 0 1-2.2-2.2l.8-.8-.9-1.8L9.5 9"/></svg>
+          <span data-i18n="bk.send">Send request on WhatsApp</span>
+        </button>
+        <p class="ticket__hint micro" id="bookHint" data-i18n="bk.hint">Select a service, date and time to continue</p>
+        <div class="ticket__alt">
+          <a data-href="tel" href="tel:+355696020609" class="link-u"><span data-i18n="bk.call">Or call</span> <span data-bind="phone">069 602 0609</span></a>
+          <a data-href="ig" href="https://www.instagram.com/rm_nailsuite/" target="_blank" rel="noopener" class="link-u" data-i18n="bk.dm">DM on Instagram</a>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact__text">
+    <p class="label reveal"><span>08</span> — <span data-i18n="ct.label">Find us</span></p>
+    <h2 class="h-display reveal" data-i18n="ct.title">Say <em>hello.</em></h2>
+    <dl class="contact__list">
+      <div class="reveal"><dt data-i18n="ct.phone">Call · WhatsApp</dt><dd><a data-href="tel" href="tel:+355696020609" class="big-link" data-bind="phone">069 602 0609</a></dd></div>
+      <div class="reveal"><dt>Instagram</dt><dd><a data-href="ig" href="https://www.instagram.com/rm_nailsuite/" target="_blank" rel="noopener" class="big-link" data-bind="ig">@rm_nailsuite</a></dd></div>
+      <div class="reveal"><dt data-i18n="ct.where">Location</dt><dd data-bind="addr-full">Ish Fusha Aviacionit,<br>Kompleksi IBN — Tiranë</dd></div>
+      <div class="reveal"><dt data-i18n="ct.hours">Hours</dt><dd data-bind="hours">09:00 — 20:00</dd></div>
+    </dl>
+    <div class="contact__ctas reveal">
+      <a data-href="wa" href="https://wa.me/355696020609" target="_blank" rel="noopener" class="btn btn--solid" data-i18n="ct.wa">Message on WhatsApp</a>
+      <a data-href="maps" href="https://www.google.com/maps/search/?api=1&query=Kompleksi+IBN+Fusha+e+Aviacionit+Tirana" target="_blank" rel="noopener" class="link-u" data-i18n="ct.dir">Get directions</a>
+    </div>
+  </div>
+  <div class="contact__map arch reveal">
+    <iframe data-src="map" title="Map — Kompleksi IBN, Tirana" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Kompleksi+IBN,+Fusha+e+Aviacionit,+Tirana,+Albania&z=15&output=embed"></iframe>
+
+    <a class="map-pin" data-href="maps" href="https://www.google.com/maps/search/?api=1&query=Kompleksi+IBN+Fusha+e+Aviacionit+Tirana" target="_blank" rel="noopener" aria-label="RM Nails Suite on Google Maps">
+      <svg class="map-pin__ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="pinCircle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+        <text><textPath href="#pinCircle" textLength="462" lengthAdjust="spacing" data-bind="pin-ring">RM NAILS SUITE · KOMPLEKSI IBN · TIRANË ·</textPath></text>
+      </svg>
+      <span class="map-pin__pulse" aria-hidden="true"></span>
+      <span class="map-pin__pulse map-pin__pulse--late" aria-hidden="true"></span>
+      <span class="map-pin__dot" aria-hidden="true">RM</span>
+    </a>
+    <a class="map-open" data-href="maps" href="https://www.google.com/maps/search/?api=1&query=Kompleksi+IBN+Fusha+e+Aviacionit+Tirana" target="_blank" rel="noopener"><span data-i18n="ct.open">Open in Google Maps</span> ↗</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <svg class="wave wave--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V36C180 0 330 10 480 36s320 36 480 6 330-30 480 10v28Z"/></svg>
+  <div class="footer__main">
+    <div class="footer__brand">
+      <span class="footer__rm">RM</span>
+      <p class="footer__word">Nails Suite</p>
+      <p class="footer__tagline">Beauty at your fingertips</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#top" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="footer__contact">
+      <a data-href="ig" href="https://www.instagram.com/rm_nailsuite/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a data-href="tel" href="tel:+355696020609" data-bind="phone">069 602 0609</a>
+      <a data-href="wa" href="https://wa.me/355696020609" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <span data-bind="addr-short">Kompleksi IBN, Tiranë</span>
+    </div>
+    <a href="#book" class="btn btn--cream" data-i18n="cta.bookAppt">Book appointment</a>
+  </div>
+  <div class="footer__base micro">
+    <span>© 2026 RM Nails Suite</span>
+    <span data-i18n="ft.made">Russian Manicure &amp; Pedicure · Tiranë</span>
+    <a href="#top" data-i18n="ft.top">Back to top ↑</a>
+  </div>
+</footer>
+
+</div>
+</main>
+
+<a href="#book" class="float-cta" aria-hidden="true" tabindex="-1"><span data-i18n="cta.book">Book</span><svg class="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+
+<script src="i18n.js?v=55"></script>
+<script src="main.js?v=55"></script>
+</body>
+</html>

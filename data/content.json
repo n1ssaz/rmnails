@@ -1,0 +1,663 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-10T10:15:36.104Z",
+  "settings": {
+    "phoneDisplay": "069 602 0609",
+    "phoneIntl": "355696020609",
+    "instagram": "rm_nailsuite",
+    "artistInstagram": "_rmaxhari_",
+    "addressLine1": "Ish Fusha Aviacionit",
+    "addressLine2": "Kompleksi IBN",
+    "city": "Tiranë",
+    "hours": "09:00 — 20:00",
+    "mapQuery": "Kompleksi IBN, Fusha e Aviacionit, Tirana, Albania"
+  },
+  "schedule": {
+    "slotMinutes": 60,
+    "daysAhead": 14,
+    "lastSlotBeforeClose": 120,
+    "week": {
+      "0": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": true
+      },
+      "1": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      },
+      "2": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      },
+      "3": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      },
+      "4": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      },
+      "5": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      },
+      "6": {
+        "open": "09:00",
+        "close": "20:00",
+        "closed": false
+      }
+    },
+    "closedDates": [
+      "2026-10-13",
+      "2026-10-14"
+    ],
+    "blocked": {}
+  },
+  "services": [
+    {
+      "id": "gel-mani",
+      "en": "Gel manicure",
+      "sq": "Manikyr xhel",
+      "price": 800,
+      "d": {
+        "en": "Russian-technique manicure, careful cuticle work and a long-lasting gel finish.",
+        "sq": "Manikyr me teknikë ruse, kujdes i imët për kutikulat dhe përfundim me xhel që zgjat."
+      },
+      "addon": null
+    },
+    {
+      "id": "gel-nails",
+      "en": "Gel nails, one colour",
+      "sq": "Thonj me xhel (njëngjyrësh)",
+      "price": 1000,
+      "d": {
+        "en": "Gel on the natural nail in a single shade of your choice.",
+        "sq": "Xhel mbi thoin natyral, në një ngjyrë sipas zgjedhjes tënde."
+      },
+      "addon": {
+        "en": "French / Ombré",
+        "sq": "French / Ombre",
+        "price": 200
+      }
+    },
+    {
+      "id": "tips",
+      "en": "Nails with tips",
+      "sq": "Thonj me tipsa",
+      "price": 1200,
+      "d": {
+        "en": "Extra length built with tips, shaped and finished in gel.",
+        "sq": "Gjatësi shtesë me tipsa, e formuar dhe e përfunduar me xhel."
+      },
+      "addon": {
+        "en": "French / Ombré",
+        "sq": "French / Ombre",
+        "price": 200
+      }
+    },
+    {
+      "id": "tips-c",
+      "en": "Nails with C-curve tips",
+      "sq": "Thonj me tipsa C",
+      "price": 1500,
+      "d": {
+        "en": "C-curve tips for a sculpted, elegant arch.",
+        "sq": "Tipsa C për një hark të skalitur dhe elegant."
+      },
+      "addon": {
+        "en": "XXL length / Ombré",
+        "sq": "Gjatësia XXL / Ombre",
+        "price": 200
+      }
+    },
+    {
+      "id": "refill",
+      "en": "Gel refill",
+      "sq": "Rimbushje thonjsh",
+      "price": 1000,
+      "d": {
+        "en": "Regrowth filled and your set refreshed.",
+        "sq": "Mbushja e pjesës së rritur dhe rifreskimi i setit."
+      },
+      "addon": null
+    },
+    {
+      "id": "refill-c",
+      "en": "C-tip refill",
+      "sq": "Rimbushje tipsa C",
+      "price": 1200,
+      "d": {
+        "en": "Refill and reshape for C-curve tip sets.",
+        "sq": "Rimbushje dhe riformim për setet me tipsa C."
+      },
+      "addon": null
+    },
+    {
+      "id": "pedi",
+      "en": "Pedicure",
+      "sq": "Pedikyr",
+      "price": 1000,
+      "d": {
+        "en": "Clean, precise care for your feet.",
+        "sq": "Kujdes i pastër dhe i saktë për këmbët e tua."
+      },
+      "addon": null
+    }
+  ],
+  "work": [
+    {
+      "img": "work-1.jpg",
+      "w": 19.5,
+      "r": 0.95,
+      "en": "gel manicure",
+      "sq": "manikyr xhel"
+    },
+    {
+      "img": "work-2.jpg",
+      "w": 14.4,
+      "r": 1,
+      "en": "pedicure",
+      "sq": "pedikyr"
+    },
+    {
+      "img": "work-3.jpg",
+      "w": 21.5,
+      "r": 0.85,
+      "en": "nails with tips",
+      "sq": "thonj me tipsa"
+    },
+    {
+      "img": "work-4.jpg",
+      "w": 16.1,
+      "r": 0.7,
+      "en": "french / ombré",
+      "sq": "french / ombre"
+    },
+    {
+      "img": "work-5.jpg",
+      "w": 14.4,
+      "r": 0.92,
+      "en": "c-curve tips",
+      "sq": "tipsa c"
+    },
+    {
+      "img": "work-6.jpg",
+      "w": 14.1,
+      "r": 0.79,
+      "en": "gel nails",
+      "sq": "thonj me xhel"
+    }
+  ],
+  "testimonials": [
+    {
+      "sample": true,
+      "name": "Erisa M.",
+      "sq": "Thonjtë më qëndruan perfekt për tre javë. Punë shumë e pastër dhe e kujdesshme.",
+      "en": "My nails stayed perfect for three weeks. Very clean, careful work."
+    },
+    {
+      "sample": true,
+      "name": "Klea H.",
+      "sq": "Ambient i qetë dhe shumë i bukur. Manikyri rus më i mirë që kam bërë në Tiranë.",
+      "en": "A calm, beautiful space. The best Russian manicure I’ve had in Tirana."
+    },
+    {
+      "sample": true,
+      "name": "Anxhela D.",
+      "sq": "Kujdes i veçantë për çdo detaj. Dola nga studio me duar si të reja.",
+      "en": "Real care for every detail. I left the studio with hands like new."
+    },
+    {
+      "sample": true,
+      "name": "Megi K.",
+      "sq": "French-i më i hollë dhe më elegant që kam pasur ndonjëherë. Do kthehem patjetër!",
+      "en": "The finest, most elegant French I’ve ever had. I’ll definitely be back!"
+    },
+    {
+      "sample": true,
+      "name": "Elona S.",
+      "sq": "Pedikyri ishte relaksues dhe rezultati i përsosur. E rekomandoj me gjithë zemër.",
+      "en": "The pedicure was relaxing and the result perfect. I recommend it wholeheartedly."
+    }
+  ],
+  "text": {
+    "nav.about": {
+      "en": "About",
+      "sq": "Rreth nesh"
+    },
+    "nav.services": {
+      "en": "Services",
+      "sq": "Shërbimet"
+    },
+    "nav.work": {
+      "en": "Work",
+      "sq": "Punimet"
+    },
+    "nav.studio": {
+      "en": "Studio",
+      "sq": "Studio"
+    },
+    "nav.contact": {
+      "en": "Contact",
+      "sq": "Kontakt"
+    },
+    "cta.bookAppt": {
+      "en": "Book appointment",
+      "sq": "Rezervo takim"
+    },
+    "hero.tag": {
+      "en": "Russian Manicure &amp; Pedicure",
+      "sq": "Manikyr &amp; Pedikyr Rus"
+    },
+    "hero.title": {
+      "en": "<span class=\"ln\"><span>Precision,</span></span><span class=\"ln\"><em>softly</em></span><span class=\"ln ln--push\"><span>done.</span></span>",
+      "sq": "<span class=\"ln\"><span>Saktësi,</span></span><span class=\"ln\"><em>e bërë</em></span><span class=\"ln ln--push\"><span>me butësi.</span></span>"
+    },
+    "hero.lede": {
+      "en": "A calm nail suite in Tirana for clean Russian manicures, gel and pedicures — shaped around your hands and finished with obsessive care.",
+      "sq": "Një studio e qetë thonjsh në Tiranë për manikyr rus, xhel dhe pedikyr — të formuara sipas duarve të tua dhe të përfunduara me kujdes të veçantë."
+    },
+    "hero.daily": {
+      "en": "· by appointment",
+      "sq": "· me rezervim"
+    },
+    "hero.scroll": {
+      "en": "Scroll",
+      "sq": "Lëviz"
+    },
+    "st.label": {
+      "en": "Philosophy",
+      "sq": "Filozofia"
+    },
+    "st.title": {
+      "en": "Details matter. <em>So do your hands.</em>",
+      "sq": "Detajet kanë rëndësi. <em>Edhe duart e tua.</em>"
+    },
+    "st.p1": {
+      "en": "The Russian technique is slow on purpose: careful cuticle work, a clean line along the nail fold and colour laid close to the skin — so the finish looks tidy on day one and graceful weeks later.",
+      "sq": "Teknika ruse është e ngadaltë me qëllim: punë e kujdesshme me kutikulat, një vijë e pastër përgjatë thoit dhe ngjyrë afër lëkurës — që rezultati të duket i rregullt që ditën e parë dhe elegant edhe javë më vonë."
+    },
+    "st.p2": {
+      "en": "Every appointment is one person, one chair and full attention. Shape, length and shade are chosen with you, never for you.",
+      "sq": "Çdo takim është një person, një karrige dhe vëmendje e plotë. Forma, gjatësia dhe ngjyra zgjidhen bashkë me ty, jo për ty."
+    },
+    "st.k1": {
+      "en": "Craft",
+      "sq": "Mjeshtëri"
+    },
+    "st.k2": {
+      "en": "Precision",
+      "sq": "Saktësi"
+    },
+    "st.k3": {
+      "en": "Personal",
+      "sq": "Personale"
+    },
+    "st.k4": {
+      "en": "Self-care",
+      "sq": "Kujdes për veten"
+    },
+    "ab.label": {
+      "en": "The artist",
+      "sq": "Artistja"
+    },
+    "ab.title": {
+      "en": "The hands <em>behind</em> the suite.",
+      "sq": "Duart <em>pas</em> studios."
+    },
+    "ab.p1": {
+      "en": "RM Nails Suite is a personal studio — the work, the space and the pace all come from one artist’s idea of what a nail appointment should feel like: unhurried, precise and quietly beautiful.",
+      "sq": "RM Nails Suite është një studio personale — puna, hapësira dhe ritmi vijnë nga ideja e një artisteje se si duhet të ndihet një takim për thonjtë: pa nxitim, i saktë dhe në heshtje i bukur."
+    },
+    "ab.bio": {
+      "en": "Life isn’t perfect, <em>but my nails are.</em>",
+      "sq": "Jeta nuk është e përsosur, <em>por thonjtë e mi janë.</em>"
+    },
+    "ab.quote": {
+      "en": "“Beauty at your fingertips.”",
+      "sq": "“Bukuria në majë të gishtave.”"
+    },
+    "sv.label": {
+      "en": "The menu",
+      "sq": "Menuja"
+    },
+    "sv.title": {
+      "en": "Services",
+      "sq": "Shërbimet"
+    },
+    "sv.stmt": {
+      "en": "Whether you’re <i class=\"bar\" style=\"--w:2.6em\"></i> looking for a clean minimalist look or long-lasting <i class=\"bar\" style=\"--w:7.2em\"></i> gel polish, every treatment at RM Nails Suite leaves your hands and feet perfectly cared for — a reflection of effortless elegance <i class=\"bar\" style=\"--w:.9em\"></i>",
+      "sq": "Pavarësisht nëse <i class=\"bar\" style=\"--w:2.6em\"></i> kërkon një pamje të pastër minimaliste apo një <i class=\"bar\" style=\"--w:7.2em\"></i> llak xhel që zgjat, çdo trajtim në RM Nails Suite i lë duart dhe këmbët e tua të kujdesura në përsosmëri — një pasqyrim i elegancës së natyrshme <i class=\"bar\" style=\"--w:.9em\"></i>"
+    },
+    "sv.premT": {
+      "en": "Premium products",
+      "sq": "Produkte premium"
+    },
+    "sv.premP": {
+      "en": "Our specialists use only premium products and follow strict hygiene standards to ensure safety and relaxation",
+      "sq": "Specialistet tona përdorin vetëm produkte premium dhe ndjekin standarde të rrepta higjiene për të garantuar siguri dhe relaksim"
+    },
+    "sv.cap": {
+      "en": "At RM Nails Suite, every visit is more than a service — it’s a gentle ritual of renewal, created to reveal your natural elegance and restore your sense of calm",
+      "sq": "Në RM Nails Suite, çdo vizitë është më shumë se një shërbim — është një ritual i butë rinovimi, i krijuar për të zbuluar elegancën tënde natyrale dhe për të rikthyer qetësinë"
+    },
+    "sv.bookPedi": {
+      "en": "Book a pedicure",
+      "sq": "Rezervo pedikyr"
+    },
+    "sv.h": {
+      "en": "Manicure &amp; pedicure in Tirana",
+      "sq": "Manikyr &amp; pedikyr në Tiranë"
+    },
+    "sv.p1": {
+      "en": "At RM Nails Suite, we believe that hand and foot care is more than a routine <u>— it’s a calming ritual of beauty and self-care</u>. Our <mark>professional manicure</mark> and pedicure services in Tirana are designed to bring comfort, precision, and elegance to every detail.",
+      "sq": "Në RM Nails Suite besojmë se kujdesi për duart dhe këmbët është më shumë se një rutinë <u>— është një ritual qetësues bukurie dhe kujdesi për veten</u>. Shërbimet tona të <mark>manikyrit profesional</mark> dhe pedikyrit në Tiranë janë krijuar për të sjellë rehati, saktësi dhe elegancë në çdo detaj."
+    },
+    "sv.p2": {
+      "en": "We offer classic, combined, and gel manicures, as well as pedicure and foot spa treatments for smooth, healthy skin. Each session includes careful nail shaping, cuticle care, gentle exfoliation, and nourishing massage to restore softness and glow.",
+      "sq": "Ofrojmë manikyr klasik, të kombinuar dhe me xhel, si edhe pedikyr dhe trajtime spa për këmbët për një lëkurë të butë e të shëndetshme. Çdo seancë përfshin formësim të kujdesshëm të thonjve, kujdes për kutikulat, eksfolim të butë dhe masazh ushqyes për të rikthyer butësinë dhe shkëlqimin."
+    },
+    "sv.bookMani": {
+      "en": "Book a manicure",
+      "sq": "Rezervo manikyr"
+    },
+    "sv.priceLabel": {
+      "en": "Price list",
+      "sq": "Lista e çmimeve"
+    },
+    "sv.priceTag": {
+      "en": "Manicure &amp; pedicure <em>prices.</em>",
+      "sq": "Çmimet e manikyrit &amp; <em>pedikyrit.</em>"
+    },
+    "sv.priceNote": {
+      "en": "All prices in Albanian Lek (L)",
+      "sq": "Të gjitha çmimet në Lek (L)"
+    },
+    "sd.label": {
+      "en": "The suite",
+      "sq": "Studio"
+    },
+    "sd.title": {
+      "en": "Come in, <em>sit softly.</em>",
+      "sq": "Hyr, <em>ulu qetë.</em>"
+    },
+    "sd.p": {
+      "en": "Arched cream walls, warm wood, a colour bar lit like a gallery and fresh flowers on the desk. This is where your appointment happens.",
+      "sq": "Mure krem me harqe, dru i ngrohtë, një “color bar” i ndriçuar si galeri dhe lule të freskëta në tavolinë. Këtu ndodh takimi yt."
+    },
+    "ex.label": {
+      "en": "The experience",
+      "sq": "Përvoja"
+    },
+    "ex.s1": {
+      "en": "Arrive",
+      "sq": "Mbërri"
+    },
+    "ex.s1d": {
+      "en": "A quiet chair, a warm welcome, no rush.",
+      "sq": "Një karrige e qetë, një mirëseardhje e ngrohtë, pa nxitim."
+    },
+    "ex.s2": {
+      "en": "Choose",
+      "sq": "Zgjidh"
+    },
+    "ex.s2d": {
+      "en": "Shape, length and shade — decided together.",
+      "sq": "Forma, gjatësia dhe ngjyra — të vendosura bashkë."
+    },
+    "ex.s3": {
+      "en": "Create",
+      "sq": "Krijo"
+    },
+    "ex.s3d": {
+      "en": "Careful prep, clean cuticles, colour close to the skin.",
+      "sq": "Përgatitje e kujdesshme, kutikula të pastra, ngjyrë afër lëkurës."
+    },
+    "ex.s4": {
+      "en": "Leave polished",
+      "sq": "Largohu e rregulluar"
+    },
+    "ex.s4d": {
+      "en": "Hands you’ll keep looking at on the way home.",
+      "sq": "Duar që do t’i shikosh gjatë gjithë rrugës për në shtëpi."
+    },
+    "lv.title": {
+      "en": "<span>Client</span><span>Love</span>",
+      "sq": "<span>Klientet</span><span>Flasin</span>"
+    },
+    "wk.label": {
+      "en": "Portfolio",
+      "sq": "Portofoli"
+    },
+    "wk.title": {
+      "en": "The <em>Work</em>",
+      "sq": "<em>Punimet</em>"
+    },
+    "wk.p": {
+      "en": "A few recent sets from the suite.",
+      "sq": "Disa sete të fundit nga studio."
+    },
+    "bk.label": {
+      "en": "Appointments",
+      "sq": "Rezervime"
+    },
+    "bk.title": {
+      "en": "Your next set <em>starts here.</em>",
+      "sq": "Seti yt i radhës <em>fillon këtu.</em>"
+    },
+    "bk.p": {
+      "en": "Pick a service, a day and a preferred time. We’ll open WhatsApp with your request written for you — the studio confirms your exact slot.",
+      "sq": "Zgjidh një shërbim, një ditë dhe një orë të preferuar. Do të hapim WhatsApp me kërkesën tënde të shkruar gati — studio të konfirmon orarin e saktë."
+    },
+    "bk.s1": {
+      "en": "Service",
+      "sq": "Shërbimi"
+    },
+    "bk.s2": {
+      "en": "Date",
+      "sq": "Data"
+    },
+    "bk.s3": {
+      "en": "Time",
+      "sq": "Ora"
+    },
+    "bk.s4": {
+      "en": "Confirm",
+      "sq": "Konfirmo"
+    },
+    "bk.q1": {
+      "en": "Choose your service",
+      "sq": "Zgjidh shërbimin"
+    },
+    "bk.q2": {
+      "en": "Choose your date",
+      "sq": "Zgjidh datën"
+    },
+    "bk.q3": {
+      "en": "Choose a preferred time",
+      "sq": "Zgjidh orën e preferuar"
+    },
+    "bk.q4": {
+      "en": "Confirm",
+      "sq": "Konfirmo"
+    },
+    "bk.est": {
+      "en": "Estimate",
+      "sq": "Vlerësim"
+    },
+    "bk.name": {
+      "en": "Your name (optional)",
+      "sq": "Emri yt (opsional)"
+    },
+    "bk.send": {
+      "en": "Send request on WhatsApp",
+      "sq": "Dërgo kërkesën në WhatsApp"
+    },
+    "bk.hint": {
+      "en": "Select a service, date and time to continue",
+      "sq": "Zgjidh shërbimin, datën dhe orën për të vazhduar"
+    },
+    "bk.call": {
+      "en": "Or call",
+      "sq": "Ose telefono"
+    },
+    "bk.dm": {
+      "en": "DM on Instagram",
+      "sq": "Shkruaj në Instagram"
+    },
+    "ct.label": {
+      "en": "Find us",
+      "sq": "Na gjeni"
+    },
+    "ct.title": {
+      "en": "Say <em>hello.</em>",
+      "sq": "Na <em>shkruaj.</em>"
+    },
+    "ct.phone": {
+      "en": "Call · WhatsApp",
+      "sq": "Telefon · WhatsApp"
+    },
+    "ct.where": {
+      "en": "Location",
+      "sq": "Vendndodhja"
+    },
+    "ct.hours": {
+      "en": "Hours",
+      "sq": "Orari"
+    },
+    "ct.wa": {
+      "en": "Message on WhatsApp",
+      "sq": "Shkruaj në WhatsApp"
+    },
+    "ct.dir": {
+      "en": "Get directions",
+      "sq": "Merr udhëzimet"
+    },
+    "ct.open": {
+      "en": "Open in Google Maps",
+      "sq": "Hape në Google Maps"
+    },
+    "nav.home": {
+      "en": "Home",
+      "sq": "Kreu"
+    },
+    "ft.made": {
+      "en": "Russian Manicure &amp; Pedicure · Tiranë",
+      "sq": "Manikyr &amp; Pedikyr Rus · Tiranë"
+    },
+    "ft.top": {
+      "en": "Back to top ↑",
+      "sq": "Kthehu lart ↑"
+    },
+    "cta.book": {
+      "en": "Book",
+      "sq": "Rezervo"
+    },
+    "sd.c1": {
+      "en": "The colour bar",
+      "sq": "Color bar-i"
+    },
+    "sd.c2": {
+      "en": "The suite",
+      "sq": "Studio"
+    },
+    "sd.c3": {
+      "en": "Your chair",
+      "sq": "Karrigia jote"
+    },
+    "sv.swipe": {
+      "en": "Swipe for the photo →",
+      "sq": "Rrëshqit për të parë foton →"
+    }
+  },
+  "ui": {
+    "en": {
+      "today": "Today",
+      "bookThis": "Book this",
+      "readyHint": "Ready — this opens WhatsApp with your request",
+      "loveEmpty": "Your words belong here.",
+      "loveEmptySub": "Visited the suite? Tag @rm_nailsuite — selected client notes will live on this wall.",
+      "waHello": "Hello RM Nails Suite! I would like to book an appointment:",
+      "waService": "Service",
+      "waDate": "Date",
+      "waTime": "Preferred time",
+      "waName": "Name",
+      "waThanks": "Could you confirm if this time is available? Thank you!",
+      "pickDate": "Choose a date to see the free times",
+      "noTimes": "No free times on this day — please pick another date",
+      "closedDay": "closed"
+    },
+    "sq": {
+      "today": "Sot",
+      "bookThis": "Rezervo këtë",
+      "readyHint": "Gati — kjo hap WhatsApp me kërkesën tënde",
+      "loveEmpty": "Fjalët e tua i përkasin këtu.",
+      "loveEmptySub": "Na vizitove? Na tag-o @rm_nailsuite — shënime të zgjedhura nga klientet do të shfaqen këtu.",
+      "waHello": "Përshëndetje RM Nails Suite! Dëshiroj të rezervoj një takim:",
+      "waService": "Shërbimi",
+      "waDate": "Data",
+      "waTime": "Ora e preferuar",
+      "waName": "Emri",
+      "waThanks": "A mund të më konfirmoni nëse kjo orë është e lirë? Faleminderit!",
+      "pickDate": "Zgjidh një datë për të parë oraret e lira",
+      "noTimes": "Nuk ka orare të lira këtë ditë — zgjidh një datë tjetër",
+      "closedDay": "mbyllur"
+    }
+  },
+  "imageVersions": {
+    "artist.jpg": 1791033443315,
+    "artist-detail.jpg": 1791033443315,
+    "hero.jpg": 1791033908747,
+    "service-pedicure.jpg": 1791206956137,
+    "service-manicure.jpg": 1791207047117,
+    "studio-1.jpg": 1791207593089,
+    "studio-2.jpg": 1791207522037,
+    "studio-3.jpg": 1791208034596,
+    "studio-4.jpg": 1791207145622,
+    "love.jpg": 1791207322014,
+    "work-1.jpg": 1791208148016,
+    "work-2.jpg": 1791208118163,
+    "work-3.jpg": 1791208165442,
+    "work-4.jpg": 1791208131556,
+    "work-5.jpg": 1791208173178,
+    "work-6.jpg": 1791208183414
+  },
+  "imageFocus": {
+    "hero.jpg": {
+      "x": 53.8,
+      "y": 34.3,
+      "zoom": 1
+    },
+    "artist.jpg": {
+      "x": 51,
+      "y": 38,
+      "zoom": 1
+    },
+    "artist-detail.jpg": {
+      "x": 50,
+      "y": 62,
+      "zoom": 1
+    },
+    "pricelist-2.jpg": {
+      "x": 50,
+      "y": 38,
+      "zoom": 1
+    },
+    "studio-1.jpg": {
+      "x": 34.8,
+      "y": 49.1,
+      "zoom": 1
+    },
+    "studio-3.jpg": {
+      "x": 39.8,
+      "y": 48.4,
+      "zoom": 1
+    }
+  }
+}
