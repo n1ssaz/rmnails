@@ -19,13 +19,18 @@ function fileStore(root) {
   return {
     kind: 'files',
     async init() {
-      fs.mkdirSync(BACKUPS, { recursive: true });
+      try {
+        fs.accessSync(path.dirname(DATA_FILE), fs.constants.W_OK);
+      } catch (e) {
+        console.warn('Warning: the disk is read-only and DATABASE_URL is not set, so admin changes cannot be saved.');
+      }
     },
     async getContent() {
       return fs.readFileSync(DATA_FILE, 'utf8');
     },
     async saveContent(json) {
       if (fs.existsSync(DATA_FILE)) {
+        fs.mkdirSync(BACKUPS, { recursive: true });
         const stamp = new Date().toISOString().replace(/[:.]/g, '-');
         fs.copyFileSync(DATA_FILE, path.join(BACKUPS, 'content-' + stamp + '.json'));
         const all = fs.readdirSync(BACKUPS).filter(f => f.startsWith('content-')).sort();
@@ -51,12 +56,15 @@ function fileStore(root) {
   };
 }
 
-function pgStore(root, url) {
+function pgStore(root, rawUrl) {
   const { Pool } = require('pg');
-  const local = /@(localhost|127\.0\.0\.1|\[::1\])(:|\/)/.test(url);
+  const u = new URL(rawUrl);
+  ['sslmode', 'sslcert', 'sslkey', 'sslrootcert', 'uselibpqcompat'].forEach(k => u.searchParams.delete(k));
+  const local = ['localhost', '127.0.0.1', '[::1]'].includes(u.hostname);
   const sslEnv = String(process.env.DATABASE_SSL || '').toLowerCase();
-  const ssl = sslEnv === 'false' || (local && sslEnv !== 'true') ? false : { rejectUnauthorized: false };
-  const pool = new Pool({ connectionString: url, ssl, max: 5 });
+  const ssl = sslEnv === 'false' || (local && !['true', 'no-verify'].includes(sslEnv)) ? false
+    : { rejectUnauthorized: sslEnv !== 'no-verify' };
+  const pool = new Pool({ connectionString: u.toString(), ssl, max: 5 });
 
   async function tx(fn) {
     const client = await pool.connect();
@@ -86,6 +94,11 @@ function pgStore(root, url) {
       if (!has.rowCount) {
         const seed = fs.readFileSync(path.join(root, 'data', 'content.json'), 'utf8');
         await pool.query("insert into rm_settings (key, value) values ('content', $1::jsonb) on conflict (key) do nothing", [seed]);
+      }
+      const authFile = path.join(root, 'private', 'auth.json');
+      const hasAuth = await pool.query("select 1 from rm_settings where key = 'auth'");
+      if (!hasAuth.rowCount && fs.existsSync(authFile)) {
+        await pool.query("insert into rm_settings (key, value) values ('auth', $1::jsonb) on conflict (key) do nothing", [fs.readFileSync(authFile, 'utf8')]);
       }
     },
     async getContent() {

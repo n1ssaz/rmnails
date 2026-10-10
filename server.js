@@ -42,15 +42,19 @@ async function loadAuth() {
   if (existing) return existing;
   const fromEnv = process.env.ADMIN_PASSWORD;
   const pw = fromEnv || crypto.randomBytes(9).toString('base64url');
+  if (!fromEnv) {
+    try {
+      fs.mkdirSync(PRIVATE, { recursive: true });
+      fs.writeFileSync(path.join(PRIVATE, 'ADMIN-PASSWORD.txt'),
+        'Admin password (change it in Admin > Siguria, then delete this file):\n' + pw + '\n', { mode: 0o600 });
+    } catch (e) {
+      throw new Error('No admin password exists yet and the disk is read-only. Set the ADMIN_PASSWORD environment variable and redeploy.');
+    }
+    console.log('\n  A new admin password was created: see private/ADMIN-PASSWORD.txt\n');
+  }
   const salt = crypto.randomBytes(16).toString('hex');
   const created = { salt, hash: hashPassword(pw, salt) };
   await store.saveAuth(created);
-  if (!fromEnv) {
-    fs.mkdirSync(PRIVATE, { recursive: true });
-    fs.writeFileSync(path.join(PRIVATE, 'ADMIN-PASSWORD.txt'),
-      'Admin password (change it in Admin > Siguria, then delete this file):\n' + pw + '\n', { mode: 0o600 });
-    console.log('\n  A new admin password was created: see private/ADMIN-PASSWORD.txt\n');
-  }
   return created;
 }
 let auth = null;

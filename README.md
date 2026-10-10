@@ -17,7 +17,7 @@ Copy `.env.example` to `.env` and fill in what you need. Every value is optional
 |---|---|
 | `PORT` | Port of the server (default 5178). |
 | `DATABASE_URL` | PostgreSQL connection URL, e.g. `postgres://user:password@host:5432/dbname`. Empty = files on disk. |
-| `DATABASE_SSL` | `true` / `false`. By default SSL is used for remote databases and not for localhost. |
+| `DATABASE_SSL` | Empty = verified SSL for remote databases, no SSL for localhost. `false` turns SSL off, `no-verify` keeps SSL but skips certificate checks (only for hosts with self-signed certificates). |
 | `ADMIN_PASSWORD` | Admin password used only the first time (when no password exists yet). |
 
 `.env` is in `.gitignore`: never commit it.
