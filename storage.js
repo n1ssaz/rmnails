@@ -14,7 +14,7 @@ function fileStore(root) {
   const PRIVATE = path.join(root, 'private');
   const AUTH_FILE = path.join(PRIVATE, 'auth.json');
   const BACKUPS = path.join(PRIVATE, 'backups');
-  const IMAGES = path.join(root, 'images');
+  const IMAGES = path.join(root, 'public', 'images');
 
   return {
     kind: 'files',
@@ -92,7 +92,7 @@ function pgStore(root, rawUrl) {
         name text primary key, mime text not null, data bytea not null, updated_at timestamptz not null default now())`);
       const has = await pool.query("select 1 from rm_settings where key = 'content'");
       if (!has.rowCount) {
-        const seed = fs.readFileSync(path.join(root, 'data', 'content.json'), 'utf8');
+        const seed = fs.readFileSync(path.join(__dirname, 'data', 'content.json'), 'utf8');
         await pool.query("insert into rm_settings (key, value) values ('content', $1::jsonb) on conflict (key) do nothing", [seed]);
       }
       const authFile = path.join(root, 'private', 'auth.json');

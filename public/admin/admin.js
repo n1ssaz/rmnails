@@ -374,7 +374,7 @@
     var f = (C.imageFocus || {})[name]; if (!f) return '';
     return 'object-position:' + f.x + '% ' + f.y + '%;transform-origin:' + f.x + '% ' + f.y + '%;transform:scale(' + (f.zoom || 1) + ')';
   }
-  function imgUrl(name) { var v = (C.imageVersions || {})[name]; return '../images/' + name + (v ? '?v=' + v : ''); }
+  function imgUrl(name) { var v = (C.imageVersions || {})[name]; return v ? '../media/' + name + '?v=' + v : '../images/' + name; }
   function photoCard(name, label, hint, extra, ratio, shape) {
     return '<div class="photo"><div class="photo__img" data-preview="' + esc(name) + '"><img src="' + esc(imgUrl(name)) + '" alt="" style="' + focusStyle(name) + '" onerror="this.remove()"><span>Pa foto ende</span></div>' +
       '<div class="photo__body"><b>' + esc(label) + '</b><small>' + esc(name) + (hint ? ' · ' + esc(hint) : '') + '</small>' + (extra || '') +

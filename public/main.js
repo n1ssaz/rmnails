@@ -88,7 +88,7 @@
         requestAnimationFrame(function () { fig.classList.add('has-img'); });
       };
       img.onerror = function () { i++; next(); };
-      img.src = 'images/' + list[i] + (IMG_V[list[i]] ? '?v=' + IMG_V[list[i]] : '');
+      img.src = (IMG_V[list[i]] ? 'media/' + list[i] + '?v=' + IMG_V[list[i]] : 'images/' + list[i]);
     })();
   }
 

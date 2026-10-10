@@ -21,6 +21,7 @@ const ROOT = __dirname;
 
 const PORT = Number(process.env.PORT) || 5178;
 const PRIVATE = path.join(ROOT, 'private');
+const PUBLIC = path.join(ROOT, 'public');
 const store = require('./storage')(ROOT);
 
 const MAX_JSON = 2 * 1024 * 1024;
@@ -185,18 +186,15 @@ function serveStatic(req, res, url) {
   if (rel.endsWith('/')) rel += 'index.html';
   const parts = rel.split('/').filter(Boolean);
 
-  if (parts.some(p => p.startsWith('.')) || ['private', 'node_modules'].includes(parts[0]) ||
-      ['/server.js', '/storage.js', '/package.json', '/package-lock.json'].includes(rel)) {
-    return send(res, 404, 'Not found');
-  }
-  const file = path.join(ROOT, ...parts);
-  if (!file.startsWith(ROOT + path.sep)) return send(res, 404, 'Not found');
+  if (parts.some(p => p.startsWith('.'))) return send(res, 404, 'Not found');
+  const file = path.join(PUBLIC, ...parts);
+  if (!file.startsWith(PUBLIC + path.sep)) return send(res, 404, 'Not found');
   fs.stat(file, (err, st) => {
     if (err || !st.isFile()) return send(res, 404, 'Not found');
     const ext = path.extname(file).toLowerCase();
     const headers = { 'Content-Type': MIME[ext] || 'application/octet-stream', 'X-Content-Type-Options': 'nosniff' };
 
-    headers['Cache-Control'] = (parts[0] === 'data' || parts[0] === 'admin' || ext === '.html') ? 'no-store' : 'no-cache';
+    headers['Cache-Control'] = (parts[0] === 'admin' || ext === '.html') ? 'no-store' : 'no-cache';
     if (parts[0] === 'admin') headers['X-Frame-Options'] = 'DENY';
     res.writeHead(200, headers);
     if (req.method === 'HEAD') return res.end();
@@ -211,10 +209,18 @@ async function serveDynamic(req, res, url) {
     res.end(req.method === 'HEAD' ? undefined : json);
     return true;
   }
-  const m = url.pathname.match(/^\/images\/([a-z0-9][a-z0-9-]{0,60}\.(?:jpg|jpeg|png|webp))$/);
+  const m = url.pathname.match(/^\/media\/([a-z0-9][a-z0-9-]{0,60}\.(jpg|jpeg|png|webp))$/);
   if (m) {
-    const img = await store.getImage(m[1]);
-    if (!img) return false;
+    let img = await store.getImage(m[1]);
+    if (!img) {
+      const file = path.join(PUBLIC, 'images', m[1]);
+      if (!fs.existsSync(file)) {
+        res.writeHead(302, { Location: '/images/' + m[1], 'Cache-Control': 'no-cache' });
+        res.end();
+        return true;
+      }
+      img = { type: MIME['.' + m[2]], data: fs.readFileSync(file) };
+    }
     res.writeHead(200, { 'Content-Type': img.type, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff' });
     res.end(req.method === 'HEAD' ? undefined : img.data);
     return true;
